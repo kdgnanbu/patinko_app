@@ -1,0 +1,1 @@
+# patinko_app
