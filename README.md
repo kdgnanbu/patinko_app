@@ -13,7 +13,6 @@ https://kdgnanbu.github.io/patinko_app/
 - HTML
 - CSS
 - JavaScript
-- GitHub Pages（デプロイ）
 
 ---
 
