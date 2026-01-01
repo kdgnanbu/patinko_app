@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>パチンコ辞め隊</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="hero-text">
+            <h1>パチンコ辞めたい！</h1>
+            <h1>脱パチンコ！</h1>
+        </div>
+        <div class="hero">
+            <div class="main-text">
+                <p>現実を知って</p>
+                <p>新しい自分へ！</p>
+            </div>
+        </div>
+        <div class="main-img">
+            <img src="./src/img/main.png" alt="写真">
+        </div>
+        <a href="#next-section" class="scroll-down">
+            <span>SCROLL</span>
+            <span class="arrow"></span>
+        </a>
+    </div>
+    <div class="about">
+        <div class="about-text">
+            <h3>このサイトについて</h3>
+            <p>あなたが普段打っているパチンコは一体どれくらいの確率で当たるのか考えたことはありますか？</p>
+            <p>まずは試しに好きな台のデータを入力してみてください</p>
+            <p>その確率を見ても尚、パチンコ店へ行くのなら止めません</p>
+            <p>現実を知ってあなたの有意義な時間を大切にしてください</p>
+            <p>※フォームの数値は半角数字で入力してください</p>
+        </div>
+        <div class="about-text">
+            <h3>数値入力フォーム</h3>
+            <form id="simulator-form">
+                <div class="form-row">
+                    <label for="kakuritu">初あたり確率:</label>
+                    <input type="text" id="kakuritu" class="back" placeholder="例：319" maxlength="3" minlength="2">
+                </div>
+
+                <div class="form-row">
+                    <label for="rush">ST突入率:</label>
+                    <input type="text" id="rush" class="back" placeholder="例：73" maxlength="2" minlength="2">
+                </div>
+
+                <div class="form-row">
+                    <label for="kaiten">1000円あたり回転数:</label>
+                    <input type="text" id="kaiten" class="back" placeholder="例：60" maxlength="2" minlength="1">
+                </div>
+
+                <div class="form-row">
+                    <label for="sikin">今回の資金:</label>
+                    <input type="text" id="sikin" class="back" placeholder="例：5000" minlength="3">
+                </div>
+
+                <div class="form-row">
+                    <label for="rupu">ST継続率:</label>
+                    <input type="text" id="rupu" class="back" placeholder="例：81" maxlength="2" minlength="2">
+                </div>
+
+                <div class="form-row full-row">
+                    <label>1回当たりの出玉数と確率:</label>
+                </div>
+                <div class="form-row no-flex">
+                    <div class="kitai_wariai">
+                        <input type="text" class="kitai back" placeholder="例：1500">玉
+                        <input type="text" class="wariai back" placeholder="例：100" maxlength="3" minlength="1">%
+                        <div id="content"></div>
+                    </div>
+                    <div id="add_del">
+                        <input type="button" id="add_button" class="add_button" value="増やす">
+                        <input type="button" id="del_button" class="del_button" value="減らす">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <p>入力が終わったら計算してみましょう</p>
+
+        <div class="tab-container">
+            <ul>
+                <li class="selected" data-id="tab-1">確率計算</li>
+                <li data-id="tab-2">シミュレーション</li>
+                <li data-id="tab-3">出球シミュレーション</li>
+            </ul>
+            <div class="tab-content selected" id="tab-1">
+                <div id="result" class="result-box">
+                    <h2>確率計算結果</h2>
+                    <button id="button" class="search-btn">計算する</button>
+                </div>
+            </div>
+            <div class="tab-content" id="tab-2">
+                <div id="simulation" class="result-box">
+                    <h2>シミュレーション結果</h2>
+                    <button id="button_simulation" class="search-btn button_simulation">シミュレーションを始める</button>
+                </div>
+            </div>
+            <div class="tab-content" id="tab-3">
+                <div id="simulation-dedama" class="result-box">
+                    <h2>出球シミュレーション結果</h2>
+                    <button id="button-simulation-dedama" class="search-btn">出玉のシミュレーションを始める</button>
+                </div>
+            </div>
+        </div>
+        <div class="reset">
+            <button id="reset" class="del_button">すべてリセットする</button>
+        </div>
+    </div>
+    <script src="./src/script.js"></script>
+</body>
+
+</html>
